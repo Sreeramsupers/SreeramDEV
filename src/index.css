@@ -1,13 +1,42 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:wght@400;500;600;700;800;900);
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+:root {
+	--font-base: 'DM Sans', sans-serif;
+	--font-secondary: 'Kaushan Script', cursive;
+	--primary-color: #edf2f8;
+	/* --secondary-color: #313bac; */
+	--secondary-color: #dc143c;
+	--secondary-color-hover: #ce0f35;
+	--black-color: #030303;
+	--lightGray-color: #e4e4e4;
+	--gray-color: #6b7688;
+	--brown-color: #46364a;
+	--white-color: #ffffff;
+	--skills-item-bg: #fef4f5;
+	--email-container-bg: #f2f7fb;
+	--textarea-color: #202020;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[data-theme='dark'] {
+	--font-base: 'DM Sans', sans-serif;
+	--font-secondary: 'Kaushan Script', cursive;
+	--primary-color: #282c35;
+	/* --secondary-color: #313bac; */
+	--secondary-color: #dc143c;
+	--secondary-color-hover: #ce0f35;
+	--black-color: #edf2f8;
+	--lightGray-color: #e4e4e4;
+	--gray-color: #c9c9c9;
+	--brown-color: #46364a;
+	--white-color: #0f0f0f;
+	--skills-item-bg: #282c35;
+	--email-container-bg: #282c35;
+	--textarea-color: #e4e4e4;
 }
