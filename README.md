@@ -1,4 +1,4 @@
-# [Your Name]'s Portfolio
+# Sreeram's Portfolio
 
 Welcome to my portfolio website! Here, you'll find information about my professional background, projects I've worked on, and ways to contact me.
 
