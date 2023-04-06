@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -44,6 +45,32 @@ const Footer = () => {
 			setDanger(true);
 			return;
 		}
+
+		emailjs
+			.send(
+				'ram-portfolio',
+				'template_knadc1e',
+				{
+					from_name: formData.name,
+					to_name: 'Sreeram',
+					from_email: formData.email,
+					to_email: 'sreerambhavanspkd@gmail.com',
+					message: formData.message,
+				},
+				'QDRhAdHsEPgdtbXkb'
+			)
+			.then(() => {
+				setLoading(false);
+				setIsFormSubmitted(true);
+				// console.log('Success: ', text);
+			})
+			.catch((err) => {
+				console.log(err);
+				setIsFormSubmitted(false);
+				alert(
+					'Oops! looks like my email client is not responding. please contact me via your gmail app'
+				);
+			});
 
 		client
 			.create(contact)
@@ -106,7 +133,7 @@ const Footer = () => {
 						/>
 					</div>
 
-					<button type='submit' className='p-text' onClick={handleSubmit}>
+					<button type='submit' onClick={handleSubmit}>
 						{!loading ? 'Send Message' : 'Sending...'}
 					</button>
 				</form>
