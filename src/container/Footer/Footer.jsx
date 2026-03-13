@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -57,7 +57,7 @@ const Footer = () => {
 					to_email: 'sreerambhavanspkd@gmail.com',
 					message: formData.message,
 				},
-				'QDRhAdHsEPgdtbXkb'
+				'QDRhAdHsEPgdtbXkb',
 			)
 			.then(() => {
 				setLoading(false);
@@ -68,7 +68,7 @@ const Footer = () => {
 				console.log(err);
 				setIsFormSubmitted(false);
 				alert(
-					'Oops! looks like my email client is not responding. please contact me via your gmail app'
+					'Oops! looks like my email client is not responding. please contact me via your gmail app',
 				);
 			});
 
